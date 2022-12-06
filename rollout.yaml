@@ -30,6 +30,13 @@ spec:
         - setWeight: 80
         - pause:
             duration: 10
+            duration: 60
+        - analysis:
+            templates:
+            - templateName: success-rate
+            args:
+            - name: service-name
+              value: default-hello-canary-80@kubernetescrd
       trafficRouting:
         smi:
           rootService: hello
