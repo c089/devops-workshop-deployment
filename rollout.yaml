@@ -31,5 +31,5 @@ spec:
         - pause:
             duration: 10
       trafficRouting:
-        traefik:
-          weightedTraefikServiceName: hello
+        smi:
+          rootService: hello

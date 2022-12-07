@@ -1,14 +1,13 @@
-apiVersion: traefik.containo.us/v1alpha1
-kind: TraefikService
+apiVersion: v1
+kind: Service
 metadata:
   name: hello
 spec:
-  weighted:
-    services:
-      - name: hello-stable
-        port: 80
-      - name: hello-canary
-        port: 80
+  ports:
+  - port: 80
+    targetPort: hello-web
+  selector:
+    app: hello
 ---
 apiVersion: v1
 kind: Service
