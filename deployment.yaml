@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+        - image: registry:5000/hello-service:argo-b2313a2d-4f01-486f-bcfc-4fbbde255f74
+          name: hello
+          ports:
+            - containerPort: 8080
+              name: hello-web
