@@ -13,7 +13,7 @@ spec:
         app: hello
     spec:
       containers:
-        - image: registry:5000/hello-service:argo-b2313a2d-4f01-486f-bcfc-4fbbde255f74
+        - image: registry:5000/hello-service:argo-c2e15a16-acb7-4ab5-9d38-ef760a33bb6a
           name: hello
           ports:
             - containerPort: 8080
