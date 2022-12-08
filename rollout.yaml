@@ -14,7 +14,6 @@ spec:
       canaryService: hello-canary
       dynamicStableScale: true
       steps:
-        - setWeight: 0
         - setCanaryScale:
             replicas: 1
         - pause:
