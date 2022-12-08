@@ -1,0 +1,13 @@
+kind: IngressBackend
+apiVersion: policy.openservicemesh.io/v1alpha1
+metadata:
+  name: hello
+spec:
+  backends:
+    - name: hello
+      port:
+        number: 8080
+        protocol: http
+  sources:
+    - kind: IPRange
+      name: 10.0.0.0/8
