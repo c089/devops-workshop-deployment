@@ -36,7 +36,7 @@ spec:
             - templateName: success-rate
             args:
             - name: service-name
-              value: default-hello-canary-80@kubernetescrd
+              value: hello-canary
       trafficRouting:
         smi:
           rootService: hello
