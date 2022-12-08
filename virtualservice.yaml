@@ -1,0 +1,35 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hello
+spec:
+  hosts:
+    - hello.k3d.localhost
+  http:
+  - route:
+    - destination:
+        host: hello
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hello-stable
+spec:
+  hosts:
+    - hello-stable.k3d.localhost
+  http:
+  - route:
+    - destination:
+        host: hello-stable
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hello
+spec:
+  hosts:
+    - hello-canary.k3d.localhost
+  http:
+  - route:
+    - destination:
+        host: hello-canary
