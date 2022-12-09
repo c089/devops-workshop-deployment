@@ -24,6 +24,7 @@ spec:
         - pause:
             duration: 10
         - setWeight: 60
+        - pause: {}
         - pause:
             duration: 10
         - setWeight: 80
