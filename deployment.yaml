@@ -15,7 +15,7 @@ spec:
         'linkerd.io/inject': 'enabled'
     spec:
       containers:
-        - image: registry:5000/hello-service:argo-c2e15a16-acb7-4ab5-9d38-ef760a33bb6a
+        - image: registry:5000/hello-service:argo-82151817-911b-4e3b-be4d-d5ab0d7daad7
           name: hello
           ports:
             - containerPort: 8080
