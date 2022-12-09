@@ -18,3 +18,6 @@ spec:
           ports:
             - containerPort: 8080
               name: hello-web
+          env:
+            - name: FOO
+              value: "1"
