@@ -31,12 +31,12 @@ spec:
         - pause:
             duration: 10
             duration: 60
-        - analysis:
-            templates:
-            - templateName: success-rate
-            args:
-            - name: service-name
-              value: hello-canary
+        #- analysis:
+        #    templates:
+        #    - templateName: success-rate
+        #    args:
+        #    - name: service-name
+        #      value: hello-canary
       trafficRouting:
         smi:
           rootService: hello
