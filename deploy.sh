@@ -9,7 +9,7 @@ yq -i \
 git add deployment.yaml
 git \
   -c user.name="Automated Deployment Script" \
-  -c user.email="noreply@k3d.localhost" \
+  -c user.email="noreply@k3d.local.profitbricks.net" \
   commit -m "Deploy example service ${IMAGE}"
 git pull --rebase --autostash
 git push

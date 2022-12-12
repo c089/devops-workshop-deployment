@@ -8,17 +8,17 @@ spec:
   tls: {}
   routes:
     - kind: Rule
-      match: Host(`hello.k3d.localhost`)
+      match: Host(`hello.k3d.local.profitbricks.net`)
       services:
         - name: hello
           port: 80
     - kind: Rule
-      match: Host(`hello-stable.k3d.localhost`)
+      match: Host(`hello-stable.k3d.local.profitbricks.net`)
       services:
         - name: hello-stable
           port: 80
     - kind: Rule
-      match: Host(`hello-canary.k3d.localhost`)
+      match: Host(`hello-canary.k3d.local.profitbricks.net`)
       services:
         - name: hello-canary
           port: 80
