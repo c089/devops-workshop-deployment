@@ -12,7 +12,7 @@ spec:
       labels:
         app: hello
       annotations:
-        'openservicemesh.io/sidecar-injection': 'enabled'
+        'linkerd.io/inject': 'enabled'
     spec:
       containers:
         - image: registry:5000/hello-service:argo-c2e15a16-acb7-4ab5-9d38-ef760a33bb6a
