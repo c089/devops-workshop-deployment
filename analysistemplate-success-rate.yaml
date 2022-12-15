@@ -13,5 +13,5 @@ spec:
         prometheus:
           address: http://kube-prometheus-stack-prometheus.observability.svc.cluster.local:9090
           query: |
-            sum(irate(traefik_service_requests_total{exported_service="{{args.service-name}}",code!~"5.*"}[1m])) /
-            sum(irate(traefik_service_requests_total{exported_service="{{args.service-name}}"}[1m]))
+            sum(rate(response_total{dst_service="{{args.service-name}}",status_code!~"5.*"}[1m])) /
+            sum(rate(response_total{dst_service="{{args.service-name}}"}[1m]))
